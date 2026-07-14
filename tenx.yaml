@@ -4,9 +4,62 @@ project:
   artifacts:
     ios:
       path: ios
+    services:
+      path: services
 
 appServices:
-  enabled: false
+  enabled: true
+  mode: managed
+  provider: neon
+  database:
+    provider: neon
+    migrations: services/db/migrations
+    policies: services/db/policies
+    seeds: services/db/seeds
+    rlsRequired: true
+    dataApi:
+      enabled: true
+  auth:
+    provider: tenx-managed-better-auth
+    enabled: true
+    methods:
+      emailPassword: true
+      apple: false
+      google: false
+    oauth:
+      additionalProviders: []
+    session:
+      iosTokenBridge: true
+  storage:
+    provider: r2
+    storageClass: standard
+    metadata:
+      provider: neon
+      table: storage.objects
+    signer:
+      provider: tenx-managed-storage-signer
+      defaultUrlTtlSeconds: 900
+    buckets:
+      - name: photos
+        public: false
+        maxFileSizeMB: 10
+        allowedMimeTypes:
+          - image/jpeg
+          - image/png
+          - image/webp
+      - name: attachments
+        public: false
+        maxFileSizeMB: 50
+        allowedMimeTypes:
+          - image/jpeg
+          - image/png
+          - image/webp
+          - application/pdf
+  clients:
+    ios:
+      authFacade: ios/Generated/TenxAuth.swift
+      dataFacade: ios/Generated/TenxData.swift
+      storageFacade: ios/Generated/TenxStorage.swift
 
 backend:
   enabled: false
