@@ -1,15 +1,15 @@
 import Foundation
 
 public enum TenxProject {
-    public static let projectAPIURL = resolvedURL("TENX_PROJECT_API_URL", fallback: "https://prj-7def2cc9aa054396.api.10x.app")
-    public static let authBaseURL = resolvedURL("TENX_AUTH_BASE_URL", fallback: "https://prj-7def2cc9aa054396.api.10x.app/auth")
-    public static let storageBaseURL = resolvedURL("TENX_STORAGE_BASE_URL", fallback: "https://prj-7def2cc9aa054396.api.10x.app/storage")
+    public static let projectAPIURL = resolvedURL("TENX_PROJECT_API_URL", fallback: "https://prv-7def2cc9aa054396.preview.10x.app")
+    public static let authBaseURL = resolvedURL("TENX_AUTH_BASE_URL", fallback: "https://prv-7def2cc9aa054396.preview.10x.app/auth")
+    public static let storageBaseURL = resolvedURL("TENX_STORAGE_BASE_URL", fallback: "https://prv-7def2cc9aa054396.preview.10x.app/storage")
     public static let requestTimeoutInterval: TimeInterval = 20
-public static let dataAPIURL: URL? = resolvedOptionalURL("TENX_DATA_API_URL", fallback: "https://ep-floral-hill-atgk3yg5.apirest.c-9.us-east-1.aws.neon.tech/neondb/rest/v1")
-public static let jwksURL: URL? = URL(string: "https://tenx-managed-better-auth.onrender.com/.well-known/apps/prj-7def2cc9aa054396/jwks.json")
-public static let audience: String? = "prj-7def2cc9aa054396"
-public static let appServiceID: String? = "20546023-4957-434d-8035-2b15b70ae583"
-public static let generatedClientHash: String? = "84142dd9a8a5bbde093624e3161e00f094a8953b7a760c1e37698335dc515ccb"
+public static let dataAPIURL: URL? = resolvedOptionalURL("TENX_DATA_API_URL", fallback: "https://ep-dawn-meadow-aty52if3.apirest.c-9.us-east-1.aws.neon.tech/neondb/rest/v1")
+public static let jwksURL: URL? = nil
+public static let audience: String? = nil
+public static let appServiceID: String? = nil
+public static let generatedClientHash: String? = nil
 public static let storageBuckets: [String] = ["photos", "attachments"]
     public static let readyAuthMethods: Set<String> = Set(["emailPassword"])
 

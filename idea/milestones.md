@@ -1,8 +1,9 @@
-- [ ] Design system + theme (Study Night tokens) and app scaffold (App, ContentView, TabView)
-- [ ] SwiftData models + local store/services (SR engine, mock AI, mock subscription)
-- [ ] Personalization onboarding quiz → personalized dashboard
-- [ ] Home dashboard (today, tests, recommended session, streak, weak subjects)
-- [ ] Ask AI helper with explain-don't-cheat flow
-- [ ] Study: flashcards + spaced repetition + quiz generator + study guides + import
-- [ ] Planner: assignments, project step breakdown, focus timer
-- [ ] Profile + Study Analytics (Swift Charts), gamification, offline persistence
+- [x] Design system + theme (Study Night tokens) and app scaffold (App, ContentView, TabView)
+- [x] SwiftData models + local store/services (SR engine, mock AI, mock subscription)
+- [x] Personalization onboarding quiz → personalized dashboard
+- [x] Home dashboard (today, tests, recommended session, streak, weak subjects)
+- [x] Ask AI helper with explain-don't-cheat flow
+- [x] Study: flashcards + spaced repetition + quiz generator + study guides + import
+- [x] Planner: assignments, project step breakdown, focus timer
+- [x] Profile + Study Analytics (Swift Charts), gamification, offline persistence
+- [x] Backend publish validation fixed (minimal FastAPI health + status route)
