@@ -1,14 +1,11 @@
-# App concept
-Name idea: StudyFlow AI
-
-The app helps
+# StudyFlow AI
 
 Built with [10x](https://10x.app). Edit this README freely — 10x
 will not overwrite it once you've made changes.
 
 ## Run it
 
-Open `ios/AppConceptNameIdeaStudyFlowAITheAppHelps.xcodeproj` in Xcode (16.0+, iOS 26 SDK) and
+Open `ios/StudyFlowAI.xcodeproj` in Xcode (16.0+, iOS 26 SDK) and
 press ⌘R to build and run.
 
 ## Project layout
@@ -26,7 +23,7 @@ press ⌘R to build and run.
 
 ## Bundle
 
-`app.10x.app-concept-name-idea-studyflow-ai-the-app-helps`
+`app.10x.studyflow-ai`
 
 
 
