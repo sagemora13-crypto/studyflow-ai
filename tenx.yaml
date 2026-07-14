@@ -6,6 +6,8 @@ project:
       path: ios
     services:
       path: services
+    backend:
+      path: backend
 
 appServices:
   enabled: true
@@ -62,4 +64,19 @@ appServices:
       storageFacade: ios/Generated/TenxStorage.swift
 
 backend:
-  enabled: false
+  enabled: true
+  product: free
+  runtime:
+    kind: python
+    framework: fastapi
+  app:
+    service:
+      port: 8080
+      healthCheck:
+        path: /healthz
+    routes:
+      - name: health_status
+        handler: app.routes.status.router
+        path: /api/v1/status
+        method: GET
+        auth: none

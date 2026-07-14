@@ -1,0 +1,32 @@
+openapi: 3.0.3
+x-10x-generated-openapi: true
+info:
+  title: "StudyFlow AI" Backend
+  version: 1.0.0
+servers:
+  - url: https://{project_ref}.api.10x.app
+    variables:
+      project_ref:
+        default: project
+paths:
+  "/api/v1/status":
+    get:
+      operationId: "health_status"
+      summary: "GET /api/v1/status"
+      x-10x-route-name: "health_status"
+      x-10x-auth-policy: "none"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+        - api
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
