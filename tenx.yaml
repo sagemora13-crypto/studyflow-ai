@@ -65,7 +65,7 @@ appServices:
 
 backend:
   enabled: true
-  product: free
+  product: paid
   runtime:
     kind: python
     framework: fastapi
